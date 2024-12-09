@@ -1,0 +1,27 @@
+server:
+  port: 8082
+spring:
+  datasource:
+    password: F@tiOuss@m@123
+    username: postgres
+    url: jdbc:postgresql://localhost:5432/studentManagement
+    driver-class-name: org.postgresql.Driver
+
+
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        types.print.banner: false
+        format_sql: true
+  application:
+    name: StudentsManagement
+
+  servlet:
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 2MB
